@@ -1,0 +1,214 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    // height: 800px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpre08.deviantart.net%2F6dad%2Fth%2Fpre%2Fi%2F2015%2F022%2F6%2F2%2Fminecraft_landscape__mountains_by_cuberon-d8exs8v.jpg&f=1&nofb=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+
+    .hero-con {
+        position: relative;
+        z-index: 1;
+        width: 630px;
+        padding: 24px 34px 34px 34px;
+        border-radius: 24px;
+        // backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // box-shadow: 6px 5px 0px #3d62fd;
+        // border: solid 10px #3d62fd;
+
+        
+
+        h1 {
+            font-size: 48px;
+            color: white;
+            text-shadow: 1px 1px black;
+            span {
+                color: white;
+            }
+        }
+
+        p {
+            color: white;
+            margin-top: 4px;
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-shadow: 1px 1px black;
+        }
+
+        .cta-secondary {
+            background: none;
+        }
+
+        &.signup {
+            position: relative;
+            // height: 540px;
+            width: 507px;
+            // box-shadow: 6px 5px 0px #3d62fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            color: black;
+            overflow-y: hidden;
+            // perspective: 800px;
+
+            .sign-up-txt {
+                text-align: left;
+                width: 100%;
+                font-weight: bold;
+                font-size: 28px;
+                margin-bottom: 8px;
+                color: black;
+                text-shadow: none;
+            }
+
+            p {
+                font-size: 16px;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 24px;
+                color: black;
+                text-shadow: none;
+            }
+
+            label {
+                width: 100%;
+            }
+
+            input {
+                width: 100%;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                height: 60px;
+                font-size: 16px;
+                padding-left: 16px;
+                border: solid 1px black;
+                border-radius: 9px;
+                // border: none;
+                transition: all 250ms ease;
+                // border-bottom: solid 2px #3d62fd;
+            }
+
+            button {
+                margin-top: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .error-msg {
+        position: absolute;
+        bottom: -8px;
+        left: 40px;
+        color: #fd3d79 !important;
+    }
+    
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.half {
+    width: 48% !important;
+    margin-right: 12px;
+    padding: 15px 15px !important;
+}
+
+.red {
+    background: #fd3d79 !important;
+}
+
+.no-marg {
+    margin: 0;
+}
+
+@keyframes shrinkAuth {
+    from {
+        height: 540px;
+    }
+
+    to {
+        height: 380px;
+    }
+}
+
+
+.auth-shrink {
+    animation-name: shrinkAuth;
+    animation-duration: 450ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    height: 380px;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+
+@keyframes growAuth {
+    from {
+        height: 380px;
+    }
+
+    to {
+        height: 540px;
+    }
+}
+
+
+.auth-grow {
+    animation-name: growAuth;
+    animation-duration: 450ms;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    height: 540px;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+
+
+
+@media (max-width: 900px) and (min-width: 0px) {
+
+    .hero {
+        flex-direction: column;
+        height: fit-content;
+
+        .hero-con {
+            margin-top: 48px;
+            margin-right: 0px;
+            width: 98vw;
+            padding: 24px;
+
+            .cta.secondary-white {
+                font-size: 18px;
+                padding: 12px 28px;
+            }
+
+
+            &.signup {
+                width: 90vw;
+                margin-bottom: 48px;
+
+                p {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+}

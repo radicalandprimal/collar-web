@@ -1,0 +1,69 @@
+.navbar {
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    transition: all 250ms ease;
+
+    .nav-con {
+        width: 100vw;
+        padding-left: 64px;
+        padding-right: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        .brand {
+            color: white;
+            font-weight: bolder;
+            font-size: 36px;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                height: 40px;
+                width: 40px;
+                margin-right: 12px;
+                transition: all 250ms;
+                filter: drop-shadow(1px 1px 1px rgba(0,0,0,.3));
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        a {
+            margin-right: 24px;
+            color: white;
+        }
+    }
+
+    &.inverted {
+        background: white;
+
+        .nav-con {
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, .3);
+
+            .brand, a {
+                color: black;
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) and (min-width: 0px) {
+    .navbar {
+
+
+        .nav-con {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}
